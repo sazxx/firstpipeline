@@ -1,32 +1,23 @@
 pipleline {
     agent any
+}
 stages{ 
-
-        stage("build"){
-
-            steps{
+    stage("build")
+        steps{
                     echo'building the app'
 
             }
         }
-       stage{
-    
-        stage("test"){
-            when {
-                expression {
-                    BRANCH_NAME == main
-                }
-            }
+ stage{
+     stage("test"){
+         steps{
 
-            steps{
-
-                echo'testing'
-            }
-        }
-    stage{
-
-        stage("deploy"){
-
+            echo'testing'
+               }
+                  }
+      }
+  stage{
+      stage("deploy"){
             steps{
 
                 echo'deploying'
@@ -34,4 +25,3 @@ stages{
         }
      }
   }
-}
