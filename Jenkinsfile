@@ -1,7 +1,7 @@
 pipleline {
     agent any
 
-    stage{
+   stages{ 
 
         stage("build"){
 
@@ -10,7 +10,7 @@ pipleline {
 
             }
         }
-    stage{
+       stage{
     
         stage("test"){
             when {
