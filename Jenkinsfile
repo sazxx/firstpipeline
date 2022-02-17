@@ -1,6 +1,5 @@
 pipleline {
     agent any
-}
 stages{ 
     stage{
     stage("build")
@@ -24,4 +23,4 @@ stages{
                  }
            }
       }
- 
+}
