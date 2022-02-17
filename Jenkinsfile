@@ -13,6 +13,11 @@ pipleline {
     stage{
     
         stage("test"){
+            when {
+                expression {
+                    BRANCH_NAME == main
+                }
+            }
 
             steps{
 
@@ -28,7 +33,5 @@ pipleline {
                 echo'deploying'
             }
         }
-    
-
     }
 }
